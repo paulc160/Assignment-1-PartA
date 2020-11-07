@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="com.mycompany.AssignmentSE">
+    <module_version install_time="1604496499994" last="true" origin="installer" specification_version="1.0">
+        <file crc="3054854491" name="config/Modules/com-mycompany-AssignmentSE.xml"/>
+        <file crc="962194004" name="modules/com-mycompany-AssignmentSE.jar"/>
+    </module_version>
+</module>
