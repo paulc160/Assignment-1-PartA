@@ -63,7 +63,7 @@ public class Student {
    @Override
    public String toString(){
         String out = "\n";
-        out += "List of Students: ";
+        out += "Student: ";
         out += "\n";
         out += "ID: " + StudentID;
         out += "\n";
