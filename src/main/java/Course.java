@@ -1,17 +1,23 @@
 
+
 import java.util.ArrayList;
-import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
+import java.text.DateFormat;  
+import java.text.SimpleDateFormat;  
+import java.time.LocalDate;  
+import java.util.Calendar; 
 
 public class Course {
     public String CourseName;
-    public DateTime startDate;
-    public DateTime endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     public ArrayList<Subject> subjects;
-    
-    public Course(String name){
+   
+    public Course(String name,LocalDate startDate,LocalDate endDate){
         CourseName = name;
         subjects = new ArrayList<>();
+        this.startDate = startDate;
+        this.endDate = endDate;
+	
    
    }
    
@@ -27,21 +33,19 @@ public class Course {
        this.CourseName = CourseName;
    }
    
-    public DateTime getStartDate(){
-     return startDate;
+    public String getStartDate(LocalDate startDate){
+     String pattern = "dd/MM/yyyy";
+     DateFormat df = new SimpleDateFormat(pattern);
+     String dateasstring = df.format(startDate);
+     return dateasstring;
+     
     }
-    
-    public void setStartDate(int year, int month, int day){
-     String inpDate = "" + year + "-" + month + "-" + day;
-    }
-    
-    public void setEndDate(int year, int month, int day){
-     String inpDate2 = "" + year + "-" + month + "-" + day;
-    }
-    
-    
-     public DateTime getEndDate(){
-     return endDate;
+  
+    public String getEndDate(LocalDate endDate){
+     String pattern = "dd/MM/yyyy";
+     DateFormat df1 = new SimpleDateFormat(pattern);
+     String dateasstring1 = df1.format(startDate);
+     return dateasstring1;
     }
     
     public String toString(){
