@@ -1,6 +1,6 @@
 anguage: java
 jdk:
-- openjdk11
+- openjdk13
 after_success:
 - mvn clean cobertura:cobertura
 - mvn test
