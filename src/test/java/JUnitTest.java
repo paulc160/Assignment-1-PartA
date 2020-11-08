@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+import java.text.DateFormat;  
+import java.text.SimpleDateFormat;  
+import java.time.LocalDate;  
+import java.util.Calendar; 
 public class JUnitTest {
     
     public static void main(String[] args) {
@@ -13,20 +11,19 @@ public class JUnitTest {
     public void transaction1(){
     Student student = new Student("John O'Shea","34","30/11/1988",56);
     Subject subject = new Subject("Programming",56);
-    Course course = new Course("Computer Science");
+    LocalDate date1 = LocalDate.of(2020,3,7);
+    LocalDate date2 = LocalDate.of(2021,8,11);
+    Course course = new Course("Computer Science",date1,date2);
     
     Student student2 = new Student("Patrick Mannion","55","30/11/1988",75);
     Subject subject2 = new Subject("Machine Learning",45);
-    Course course2 = new Course("Electrical Engineering");
-    
+    Course course2 = new Course("Electrical Engineering",date1,date2);
     
     student.addSubject(subject);
     student.addSubject(subject2);
     student.addCourse(course);
     student.addCourse(course2);
     
-    course.setStartDate(2020, 01, 22);
-    course.setEndDate(2021, 01, 22);
     course.addSubjects(subject);
     course.addSubjects(subject2);
     System.out.println("Test Scenario 1: ");
@@ -39,19 +36,10 @@ public class JUnitTest {
 
    
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+   
 }
 
    
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 
 
