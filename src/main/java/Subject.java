@@ -15,11 +15,12 @@ import java.util.ArrayList;
 public class Subject {
     public String modname;
     public int ModuleID;
-  
+    private ArrayList<Student> students;
     
     public Subject(String modname,int id){
         ModuleID = id;
         this.modname = modname;
+        students = new ArrayList<>();
         
     
    }
@@ -31,6 +32,10 @@ public class Subject {
     public void setModName(String modname){
        this.modname = modname;
    }
+    
+     public void addStudent(Student student){
+        students.add(student);
+    }
    
     @Override
      public String toString(){
@@ -38,6 +43,10 @@ public class Subject {
         out += "Module Name:" +modname;
         out += "\n";
         out+= "Module ID:" +ModuleID;
+        out += "\n";
+       for (Student student: students){
+            out+=student + "\n";
+        }
         out += "\n";
         return out;
    

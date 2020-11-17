@@ -19,17 +19,24 @@ public class JUnitTest {
     Subject subject2 = new Subject("Machine Learning",45);
     Course course2 = new Course("Electrical Engineering",date1,date2);
     
-    student.addSubject(subject);
-    student.addSubject(subject2);
-    student.addCourse(course);
-    student.addCourse(course2);
+    student.setModules("Programming, Machine Learning");
+    student.setCourses("Computer Science, Electrical Engineering");
+    student2.setModules("Machine Learning, Programming");
+    student2.setCourses("Electrical Engineering");
+   subject.addStudent(student);
+   subject.addStudent(student2);
+   subject2.addStudent(student);
+   subject2.addStudent(student2);
     
     course.addSubjects(subject);
     course.addSubjects(subject2);
+    course2.addSubjects(subject2);
+    course2.addSubjects(subject);
     System.out.println("Test Scenario 1: ");
     System.out.println(course.toString());
-    System.out.println(student.toString());
-    
+    System.out.println(course2.toString());
+    System.out.println(subject.toString());
+    System.out.println(subject2.toString());
     
     
     }

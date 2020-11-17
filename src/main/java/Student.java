@@ -5,19 +5,14 @@ public class Student {
    private String DOB;
    private int StudentID;
    private String Username;
-   private ArrayList<Subject> subjects;
-   private ArrayList<Course> courses;
-  
+   private String modules;
+   private String Courses;
    
    public Student(String StudentName,String age,String DOB,int id){
        name = StudentName;
        StudentID = id;
        this.age = age;
        this.DOB = DOB;
-       subjects = new ArrayList<>();
-       courses = new ArrayList<>();
-      
-       
     }
    
    public String getName(){
@@ -36,17 +31,25 @@ public class Student {
        return StudentID;
    }
     
-    public void addSubject(Subject subject){
-        subjects.add(subject);
-    }
-   
-   public void addCourse(Course course){
-        courses.add(course);
-    }
-   
+     public String getModules(){
+       return modules;
+   }
+    
+    public String getCourses(){
+       return Courses;
+   }
+    
     public String getUsername(String name, String age){
        String Username = name+age;
        return Username;
+   }
+   
+     public void setModules(String modules){
+       this.modules = modules;
+   }
+   
+     public void setCourses(String Courses){
+       this.Courses = Courses;
    }
     
     public void setName(String name){
@@ -69,19 +72,10 @@ public class Student {
         out += "\n";
         out += "Username: " + getUsername(name,age);
         out += "\n";
-        out += "Modules: ";
-       for (Subject subject: subjects){
-            out+=subject + "\n";
-        }
+        out += "Modules: " + modules;
         out += "\n";
-        out += "Courses Registered For: ";
+        out += "Courses: " + Courses;
         out += "\n";
-        for (Course course: courses){
-            out+=course.CourseName + "\n";
-        }
-        
-        
-        
         
         return out;
    
